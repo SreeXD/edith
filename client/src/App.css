@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;500;600;700&display=swap');
+
+:root {
+    --edith: rgb(250, 250, 250);
+    --edith-darker: rgb(250, 250, 250);
+    --edith-glow: rgb(255, 255, 255);
+    --edith-alt: rgb(128, 83, 246);
+    --edith-alt-lighter: rgb(162, 133, 235);
+    --edith-alt-darker: rgb(89, 61, 229);
+    --edith-speech: rgb(230, 230, 230);
+    --edith-btn: rgb(250, 250, 250);
+    --edith-btn-secondary: rgb(89, 61, 229);
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--edith-alt);
+}
+
+@keyframes animate-in {
+    to {
+        height: 100vh;
+    }
+}
+
+@keyframes animate-out {
+    to {
+        height: 0vh;
+    }
+}
+
+#app::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 0;
+    background-color: var(--edith-alt-lighter);
+    animation: animate-in 650ms cubic-bezier(.62,.24,.38,.73) forwards;
+    z-index: -2;
+}
+
+#app::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 0;
+    background-color: var(--edith);
+    animation: animate-in 550ms 250ms cubic-bezier(.62,.24,.38,.73) forwards;
+    z-index: -1;
+}
+
+#app.animate-out::before {
+    height: 100vh;
+    animation: animate-out 650ms 250ms cubic-bezier(.62,.24,.38,.73) forwards;
+}
+
+#app.animate-out::after {
+    height: 100vh;
+    animation: animate-out 650ms cubic-bezier(.62,.24,.38,.73) forwards;
+}

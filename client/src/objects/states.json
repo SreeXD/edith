@@ -1,0 +1,11 @@
+{
+    "states": [
+        "Hey! I am Edith. A virtual assistant for predicting house prices. Please enter your desired location to start",
+        "What's the approximate area in square feet you're looking for?",
+        "Please choose the number of bedrooms you need",
+        "How many bathrooms do you need?",
+        "According to my calculations, The home of your choice should cost about ",
+        "Enter your desired location",
+        "You've entered an invalid number"
+    ]
+}
