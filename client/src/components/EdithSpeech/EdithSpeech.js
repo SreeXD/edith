@@ -19,7 +19,7 @@ const EdithSpeech = (props) => {
     const speak = (text) => {
         var msg = new SpeechSynthesisUtterance();
         var voices = speechSynthesis.getVoices();
-        msg.voice = voices[6];
+        msg.voice = voices[7];
         msg.rate = 1;
         msg.text = text;
         msg.pitch = 1.1;
